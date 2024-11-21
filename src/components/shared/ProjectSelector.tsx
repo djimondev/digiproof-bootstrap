@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { ChevronDown, Plus } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useProjectStore } from '../../store/projectStore';
 import { Project } from '../../types/project';
@@ -14,7 +15,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ type }) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const { projectId } = useParams();
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
   
   const projects = useProjectStore(state => 
     state.projects.filter(p => p.type === type)
@@ -22,7 +23,6 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ type }) => {
   const selectedProject = useProjectStore(state => state.selectedProject);
   const selectProject = useProjectStore(state => state.selectProject);
 
-  // Update selected project when projectId changes
   useEffect(() => {
     if (projectId) {
       const project = projects.find(p => p.id === projectId);
@@ -62,7 +62,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ type }) => {
                  bg-white/10 text-white hover:bg-white/20 transition-colors"
       >
         <span className="font-medium truncate">
-          {selectedProject ? selectedProject.name : 'Select Project'}
+          {selectedProject ? selectedProject.name : t('project.select.title')}
         </span>
         <ChevronDown
           size={20}
@@ -77,7 +77,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ type }) => {
         <div className="absolute top-full left-0 mt-2 w-full rounded-lg shadow-lg 
                      bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 
                      divide-y divide-gray-200 dark:divide-gray-700 z-50">
-          {projects.length > 0 && (
+          {projects.length > 0 ? (
             <div className="py-1">
               {projects.map(project => (
                 <button
@@ -94,6 +94,10 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ type }) => {
                 </button>
               ))}
             </div>
+          ) : (
+            <div className="py-2 px-4 text-sm text-gray-500 dark:text-gray-400">
+              {t('project.select.empty')}
+            </div>
           )}
 
           <div className="py-1">
@@ -104,7 +108,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ type }) => {
                        dark:hover:bg-gray-700 font-medium"
             >
               <Plus size={16} />
-              <span>New Project</span>
+              <span>{t('project.select.new')}</span>
             </button>
           </div>
         </div>

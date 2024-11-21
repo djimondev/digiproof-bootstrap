@@ -24,14 +24,31 @@
     },
     "next": "Next",
     "back": "Back",
-    "create": "Create"
+    "create": "Create",
+    "selectProject": "Select Project",
+    "language": {
+      "change": "Change Language",
+      "en": "English",
+      "fr": "French"
+    },
+    "actions": {
+      "download": "Download",
+      "verify": "Verify",
+      "retry": "Try Again",
+      "cancel": "Cancel"
+    }
   },
   "features": {
     "timestamp": "Timestamp",
     "verify": "Verify",
     "seal": "Seal",
     "archive": "Archive",
-    "auditTrail": "Audit Trail"
+    "auditTrail": "Audit Trail",
+    "dropzone": {
+      "file": "Drop your file here, or click to select",
+      "token": "Drop the timestamp token here",
+      "multiple": "Drop files here, or click to select"
+    }
   },
   "project": {
     "create": "Create New Project",
@@ -39,6 +56,13 @@
     "description": "Description",
     "logo": "Project Logo",
     "dropzone": "Drop an image here, or click to select",
-    "noProjects": "No projects yet. Create your first project to get started."
+    "noProjects": "No projects yet. Create your first project to get started.",
+    "summary": "Project Summary",
+    "created": "Created",
+    "select": {
+      "title": "Select Project",
+      "new": "New Project",
+      "empty": "No projects available"
+    }
   }
 }

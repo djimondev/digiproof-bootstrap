@@ -24,14 +24,31 @@
     },
     "next": "Suivant",
     "back": "Retour",
-    "create": "Créer"
+    "create": "Créer",
+    "selectProject": "Sélectionner un projet",
+    "language": {
+      "change": "Changer de langue",
+      "en": "Anglais",
+      "fr": "Français"
+    },
+    "actions": {
+      "download": "Télécharger",
+      "verify": "Vérifier",
+      "retry": "Réessayer",
+      "cancel": "Annuler"
+    }
   },
   "features": {
     "timestamp": "Horodater",
     "verify": "Vérifier",
     "seal": "Sceller",
     "archive": "Archiver",
-    "auditTrail": "Journal d'audit"
+    "auditTrail": "Journal d'audit",
+    "dropzone": {
+      "file": "Déposez votre fichier ici ou cliquez pour sélectionner",
+      "token": "Déposez le jeton d'horodatage ici",
+      "multiple": "Déposez vos fichiers ici ou cliquez pour sélectionner"
+    }
   },
   "project": {
     "create": "Créer un nouveau projet",
@@ -39,6 +56,13 @@
     "description": "Description",
     "logo": "Logo du projet",
     "dropzone": "Déposez une image ici ou cliquez pour sélectionner",
-    "noProjects": "Aucun projet pour le moment. Créez votre premier projet pour commencer."
+    "noProjects": "Aucun projet pour le moment. Créez votre premier projet pour commencer.",
+    "summary": "Résumé du projet",
+    "created": "Créé le",
+    "select": {
+      "title": "Sélectionner un projet",
+      "new": "Nouveau projet",
+      "empty": "Aucun projet disponible"
+    }
   }
 }

@@ -1,6 +1,7 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Plus } from 'lucide-react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { Project } from '../../types/project';
 import ProjectCard from './ProjectCard';
 
@@ -11,6 +12,7 @@ interface ProjectListProps {
 
 const ProjectList: React.FC<ProjectListProps> = ({ type, projects }) => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const getTypeColor = () => {
     switch (type) {
@@ -26,16 +28,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ type, projects }) => {
   };
 
   const getTitle = () => {
-    switch (type) {
-      case 'timestamping':
-        return 'Timestamping';
-      case 'sealing':
-        return 'Sealing';
-      case 'archiving':
-        return 'Archiving';
-      default:
-        return '';
-    }
+    return t(`apps.${type}.title`);
   };
 
   return (
@@ -50,7 +43,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ type, projects }) => {
                    rounded-lg transition-colors space-x-2 ${getTypeColor()}`}
         >
           <Plus size={20} />
-          <span>New Project</span>
+          <span>{t('common.newProject')}</span>
         </button>
       </div>
 
@@ -67,7 +60,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ type, projects }) => {
       ) : (
         <div className="text-center py-12">
           <p className="text-gray-500 dark:text-gray-400 mb-6">
-            No projects yet. Create your first {type} project to get started.
+            {t('project.noProjects')}
           </p>
         </div>
       )}
