@@ -1,34 +1,24 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Clock, Download, RefreshCw } from 'lucide-react';
-import FileDropzone from '../shared/FileDropzone';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { useFileProcessor } from '../../hooks/useFileProcessor';
 import FeedbackScreen from '../shared/FeedbackScreen';
+import FileDropzone from '../shared/FileDropzone';
 
 const TimestampFeature: React.FC = () => {
   const { t } = useTranslation();
-  const [file, setFile] = useState<File | null>(null);
-  const [isComplete, setIsComplete] = useState(false);
-  const [timestamp, setTimestamp] = useState<string>('');
-
-  const handleDrop = (files: File[]) => {
-    setFile(files[0]);
-  };
-
-  const handleNext = () => {
-    // Mock timestamp generation
-    setTimestamp(new Date().toISOString());
-    setIsComplete(true);
-  };
+  const {
+    file,
+    isComplete,
+    timestamp,
+    handleDrop,
+    handleNext,
+    handleReset
+  } = useFileProcessor();
 
   const handleDownload = () => {
     // Mock token download
     console.log('Downloading token for:', file?.name);
-  };
-
-  const handleReset = () => {
-    setFile(null);
-    setIsComplete(false);
-    setTimestamp('');
   };
 
   if (isComplete) {
