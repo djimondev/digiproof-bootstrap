@@ -1,68 +1,68 @@
 {
-  "apps": {
-    "timestamping": {
-      "title": "Horodatage",
-      "description": "Prouvez la date exacte et l'intégrité des données de vos documents importants"
+    "apps": {
+        "timestamping": {
+            "title": "Horodatage",
+            "description": "Prouvez la date exacte et l'intégrité des données de vos documents importants"
+        },
+        "sealing": {
+            "title": "Scellement",
+            "description": "Scellez vos documents et données pour garantir leur intégrité et leur authenticité"
+        },
+        "archiving": {
+            "title": "Archivage",
+            "description": "Archivez vos documents importants"
+        }
     },
-    "sealing": {
-      "title": "Scellement",
-      "description": "Scellez vos documents et données pour garantir leur intégrité et leur authenticité"
+    "common": {
+        "applications": "Applications",
+        "dashboard": "Tableau de bord",
+        "newProject": "Nouveau Projet",
+        "settings": "Paramètres",
+        "theme": {
+            "light": "Thème Clair",
+            "dark": "Thème Sombre"
+        },
+        "next": "Suivant",
+        "back": "Retour",
+        "create": "Créer",
+        "selectProject": "Sélectionner un projet",
+        "language": {
+            "change": "Changer de langue",
+            "en": "Anglais",
+            "fr": "Français"
+        },
+        "actions": {
+            "download": "Télécharger",
+            "verify": "Vérifier",
+            "retry": "Réessayer",
+            "cancel": "Annuler"
+        }
     },
-    "archiving": {
-      "title": "Archivage",
-      "description": "Archivez vos documents importants"
-    }
-  },
-  "common": {
-    "applications": "Applications",
-    "dashboard": "Tableau de bord",
-    "newProject": "Nouveau Projet",
-    "settings": "Paramètres",
-    "theme": {
-      "light": "Thème Clair",
-      "dark": "Thème Sombre"
+    "features": {
+        "timestamp": "Horodater",
+        "verify": "Vérifier",
+        "seal": "Sceller",
+        "archive": "Archiver",
+        "auditTrail": "Journal d'audit",
+        "dropzone": {
+            "file": "Déposez votre fichier ici ou cliquez pour sélectionner",
+            "token": "Déposez le jeton d'horodatage ici",
+            "multiple": "Déposez vos fichiers ici ou cliquez pour sélectionner"
+        }
     },
-    "next": "Suivant",
-    "back": "Retour",
-    "create": "Créer",
-    "selectProject": "Sélectionner un projet",
-    "language": {
-      "change": "Changer de langue",
-      "en": "Anglais",
-      "fr": "Français"
-    },
-    "actions": {
-      "download": "Télécharger",
-      "verify": "Vérifier",
-      "retry": "Réessayer",
-      "cancel": "Annuler"
+    "project": {
+        "create": "Créer un nouveau projet",
+        "name": "Nom du projet",
+        "description": "Description",
+        "logo": "Logo du projet",
+        "dropzone": "Déposez une image ici ou cliquez pour sélectionner",
+        "noProjects": "Aucun projet pour le moment. Créez votre premier projet pour commencer.",
+        "summary": "Résumé du projet",
+        "created": "Créé le",
+        "select": {
+            "title": "Sélectionner un projet",
+            "new": "Nouveau projet",
+            "empty": "Aucun projet disponible"
+        }
     }
-  },
-  "features": {
-    "timestamp": "Horodater",
-    "verify": "Vérifier",
-    "seal": "Sceller",
-    "archive": "Archiver",
-    "auditTrail": "Journal d'audit",
-    "dropzone": {
-      "file": "Déposez votre fichier ici ou cliquez pour sélectionner",
-      "token": "Déposez le jeton d'horodatage ici",
-      "multiple": "Déposez vos fichiers ici ou cliquez pour sélectionner"
-    }
-  },
-  "project": {
-    "create": "Créer un nouveau projet",
-    "name": "Nom du projet",
-    "description": "Description",
-    "logo": "Logo du projet",
-    "dropzone": "Déposez une image ici ou cliquez pour sélectionner",
-    "noProjects": "Aucun projet pour le moment. Créez votre premier projet pour commencer.",
-    "summary": "Résumé du projet",
-    "created": "Créé le",
-    "select": {
-      "title": "Sélectionner un projet",
-      "new": "Nouveau projet",
-      "empty": "Aucun projet disponible"
-    }
-  }
 }
