@@ -4,12 +4,11 @@ import AuditTrail from "../components/AuditTrail";
 import Dashboard from "../components/Dashboard";
 import ArchiveFeature from "../components/features/ArchiveFeature";
 import ProjectCreation from "../components/ProjectCreation";
-
+import ProjectList from "../components/shared/ProjectList";
+import { useProjectStore } from "../store/projectStore";
 const ArchivingApp: React.FC = () => {
     const location = useLocation();
-    // const projects = useProjectStore(state =>
-    //   state.projects.filter(p => p.type === 'archiving')
-    // );
+    const projects = useProjectStore(state => state.projects.filter(p => p.type === "archiving"));
 
     // Show project creation form when path ends with /new
     if (location.pathname === "/archiving/new") {
@@ -18,6 +17,8 @@ const ArchivingApp: React.FC = () => {
 
     return (
         <Routes>
+            <Route index element={<ProjectList type="archiving" projects={projects} />} />
+            <Route path="new" element={<ProjectCreation type="archiving" />} />
             <Route path="/:projectId/dashboard" element={<Dashboard type="archiving" />} />
             <Route path="/:projectId/archive" element={<ArchiveFeature />} />
             <Route path="/:projectId/audit" element={<AuditTrail />} />
