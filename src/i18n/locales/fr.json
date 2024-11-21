@@ -1,0 +1,44 @@
+{
+  "apps": {
+    "timestamping": {
+      "title": "Horodatage",
+      "description": "Prouvez la date exacte et l'intégrité des données de vos documents importants"
+    },
+    "sealing": {
+      "title": "Scellement",
+      "description": "Scellez vos documents et données pour garantir leur intégrité et leur authenticité"
+    },
+    "archiving": {
+      "title": "Archivage",
+      "description": "Archivez vos documents importants"
+    }
+  },
+  "common": {
+    "applications": "Applications",
+    "dashboard": "Tableau de bord",
+    "newProject": "Nouveau Projet",
+    "settings": "Paramètres",
+    "theme": {
+      "light": "Thème Clair",
+      "dark": "Thème Sombre"
+    },
+    "next": "Suivant",
+    "back": "Retour",
+    "create": "Créer"
+  },
+  "features": {
+    "timestamp": "Horodater",
+    "verify": "Vérifier",
+    "seal": "Sceller",
+    "archive": "Archiver",
+    "auditTrail": "Journal d'audit"
+  },
+  "project": {
+    "create": "Créer un nouveau projet",
+    "name": "Nom du projet",
+    "description": "Description",
+    "logo": "Logo du projet",
+    "dropzone": "Déposez une image ici ou cliquez pour sélectionner",
+    "noProjects": "Aucun projet pour le moment. Créez votre premier projet pour commencer."
+  }
+}

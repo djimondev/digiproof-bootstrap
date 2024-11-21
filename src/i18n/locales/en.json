@@ -1,0 +1,44 @@
+{
+  "apps": {
+    "timestamping": {
+      "title": "Timestamping",
+      "description": "Prove the exact date and the data integrity of your important documents"
+    },
+    "sealing": {
+      "title": "Sealing",
+      "description": "Seal your documents and data to ensure their integrity and authenticity"
+    },
+    "archiving": {
+      "title": "Archiving",
+      "description": "Archive your important documents"
+    }
+  },
+  "common": {
+    "applications": "Applications",
+    "dashboard": "Dashboard",
+    "newProject": "New Project",
+    "settings": "Settings",
+    "theme": {
+      "light": "Light Theme",
+      "dark": "Dark Theme"
+    },
+    "next": "Next",
+    "back": "Back",
+    "create": "Create"
+  },
+  "features": {
+    "timestamp": "Timestamp",
+    "verify": "Verify",
+    "seal": "Seal",
+    "archive": "Archive",
+    "auditTrail": "Audit Trail"
+  },
+  "project": {
+    "create": "Create New Project",
+    "name": "Project Name",
+    "description": "Description",
+    "logo": "Project Logo",
+    "dropzone": "Drop an image here, or click to select",
+    "noProjects": "No projects yet. Create your first project to get started."
+  }
+}
