@@ -4,13 +4,12 @@ import AuditTrail from '../components/AuditTrail';
 import Dashboard from '../components/Dashboard';
 import SealFeature from '../components/features/SealFeature';
 import ProjectCreation from '../components/ProjectCreation';
-import { useProjectStore } from '../store/projectStore';
 
 const SealingApp: React.FC = () => {
   const location = useLocation();
-  const projects = useProjectStore(state => 
-    state.projects.filter(p => p.type === 'sealing')
-  );
+  // const projects = useProjectStore(state => 
+  //   state.projects.filter(p => p.type === 'sealing')
+  // );
 
   // Show project creation form when path ends with /new
   if (location.pathname === '/sealing/new') {

@@ -1,8 +1,7 @@
-import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { Shield, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
+import { ChevronLeft, ChevronRight, Shield } from 'lucide-react';
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import NavItems from './NavItems';
 import ProjectSelector from './shared/ProjectSelector';
 
@@ -15,7 +14,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ isExpanded, color, onToggle }) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   const getAppTypeAndProjectId = () => {
     const parts = location.pathname.split('/').filter(Boolean);

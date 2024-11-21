@@ -1,6 +1,6 @@
-import React from 'react';
-import { LucideIcon } from 'lucide-react';
 import clsx from 'clsx';
+import { LucideIcon } from 'lucide-react';
+import React from 'react';
 
 interface Action {
   label: string;
@@ -25,12 +25,10 @@ const FeedbackScreen: React.FC<FeedbackScreenProps> = ({
   status = 'success'
 }) => {
   const getStatusColor = () => {
-    switch (status) {
-      case 'error':
-        return 'text-red-500 bg-red-100 dark:bg-red-900/20';
-      default:
-        return 'text-green-500 bg-green-100 dark:bg-green-900/20';
+    if (status === 'error') {
+      return 'text-red-500 bg-red-100 dark:bg-red-900/20';
     }
+    return 'text-green-500 bg-green-100 dark:bg-green-900/20';
   };
 
   return (
@@ -48,11 +46,11 @@ const FeedbackScreen: React.FC<FeedbackScreenProps> = ({
       </h2>
       <p className="mt-2 text-gray-600 dark:text-gray-300">{message}</p>
       <div className="mt-8 flex justify-center space-x-4">
-        {actions.map((action, index) => {
+        {actions.map((action) => {
           const Icon = action.icon;
           return (
             <button
-              key={index}
+              key={action.label}
               onClick={action.onClick}
               className={clsx(
                 'px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors',

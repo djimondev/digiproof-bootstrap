@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import { AlertCircle, CheckCircle, Folder } from 'lucide-react';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { useProjectStore } from '../store/projectStore';
 
@@ -11,7 +10,7 @@ interface DashboardProps {
 
 const Dashboard: React.FC<DashboardProps> = ({ type }) => {
   const { projectId } = useParams();
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const project = useProjectStore(state => state.selectedProject);
 
   React.useEffect(() => {

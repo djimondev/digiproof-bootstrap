@@ -1,10 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import clsx from 'clsx';
 import { ChevronDown, Plus } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useProjectStore } from '../../store/projectStore';
 import { Project } from '../../types/project';
-import clsx from 'clsx';
 
 interface ProjectSelectorProps {
   type: 'timestamping' | 'sealing' | 'archiving';
@@ -15,7 +14,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ type }) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const { projectId } = useParams();
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   
   const projects = useProjectStore(state => 
     state.projects.filter(p => p.type === type)

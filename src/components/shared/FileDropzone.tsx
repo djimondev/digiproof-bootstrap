@@ -1,8 +1,8 @@
-import React, { useCallback } from 'react';
-import { useDropzone } from 'react-dropzone';
-import { Upload, X } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
+import { Upload, X } from 'lucide-react';
+import React from 'react';
+import { useDropzone } from 'react-dropzone';
+import { useTranslation } from 'react-i18next';
 
 interface FileDropzoneProps {
   file?: File | null;

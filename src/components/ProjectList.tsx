@@ -1,7 +1,6 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Project } from '../types/project';
 import { Folder } from 'lucide-react';
+import React from 'react';
+import { Project } from '../types/project';
 
 interface ProjectListProps {
   projects: Project[];
@@ -9,7 +8,7 @@ interface ProjectListProps {
 }
 
 const ProjectList: React.FC<ProjectListProps> = ({ projects, onSelect }) => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

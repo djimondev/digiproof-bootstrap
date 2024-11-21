@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { ProjectFormData } from '../../types/project';
 
 interface ProjectSummaryProps {
@@ -7,7 +6,7 @@ interface ProjectSummaryProps {
 }
 
 const ProjectSummary: React.FC<ProjectSummaryProps> = ({ data }) => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <div className="space-y-6">

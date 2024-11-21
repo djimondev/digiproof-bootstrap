@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import clsx from 'clsx';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState } from 'react';
 
 interface AuditEvent {
   id: string;
@@ -11,7 +10,7 @@ interface AuditEvent {
 }
 
 const AuditTrail: React.FC = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
@@ -25,9 +24,8 @@ const AuditTrail: React.FC = () => {
 
   const totalPages = Math.ceil(events.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const paginatedEvents = events
-    .sort((a, b) => b.date.getTime() - a.date.getTime())
-    .slice(startIndex, startIndex + itemsPerPage);
+  const sortedEvents = events.sort((a, b) => b.date.getTime() - a.date.getTime());
+  const paginatedEvents = sortedEvents.slice(startIndex, startIndex + itemsPerPage);
 
   const getEventColor = (kind: string) => {
     switch (kind) {

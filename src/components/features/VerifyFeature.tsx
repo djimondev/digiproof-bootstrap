@@ -1,11 +1,10 @@
+import { RefreshCw, ShieldCheck } from 'lucide-react';
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { ShieldCheck, RefreshCw } from 'lucide-react';
-import FileDropzone from '../shared/FileDropzone';
 import FeedbackScreen from '../shared/FeedbackScreen';
+import FileDropzone from '../shared/FileDropzone';
 
 const VerifyFeature: React.FC = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const [file, setFile] = useState<File | null>(null);
   const [token, setToken] = useState<File | null>(null);
   const [isComplete, setIsComplete] = useState(false);
