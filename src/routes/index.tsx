@@ -1,9 +1,9 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import Homepage from '../pages/Homepage';
-import TimestampingApp from '../pages/TimestampingApp';
-import SealingApp from '../pages/SealingApp';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import ArchivingApp from '../pages/ArchivingApp';
+import Homepage from '../pages/Homepage';
+import SealingApp from '../pages/SealingApp';
+import TimestampingApp from '../pages/TimestampingApp';
 
 const AppRoutes: React.FC = () => {
   return (

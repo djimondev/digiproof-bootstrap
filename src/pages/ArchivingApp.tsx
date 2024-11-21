@@ -1,14 +1,12 @@
 import React from 'react';
-import { Routes, Route, Navigate, useParams, useLocation } from 'react-router-dom';
-import { useProjectStore } from '../store/projectStore';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import AuditTrail from '../components/AuditTrail';
 import Dashboard from '../components/Dashboard';
 import ArchiveFeature from '../components/features/ArchiveFeature';
-import AuditTrail from '../components/AuditTrail';
 import ProjectCreation from '../components/ProjectCreation';
-import ProjectList from '../components/shared/ProjectList';
+import { useProjectStore } from '../store/projectStore';
 
 const ArchivingApp: React.FC = () => {
-  const { projectId } = useParams();
   const location = useLocation();
   const projects = useProjectStore(state => 
     state.projects.filter(p => p.type === 'archiving')
@@ -17,11 +15,6 @@ const ArchivingApp: React.FC = () => {
   // Show project creation form when path ends with /new
   if (location.pathname === '/archiving/new') {
     return <ProjectCreation type="archiving" />;
-  }
-
-  // Show project list when no project is selected
-  if (!projectId) {
-    return <ProjectList type="archiving" projects={projects} />;
   }
 
   return (

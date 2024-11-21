@@ -1,17 +1,22 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { CheckCircle, AlertCircle, Folder } from 'lucide-react';
-import { useProjectStore } from '../store/projectStore';
 import clsx from 'clsx';
+import { AlertCircle, CheckCircle, Folder } from 'lucide-react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
+import { useProjectStore } from '../store/projectStore';
 
 interface DashboardProps {
   type: 'timestamping' | 'sealing' | 'archiving';
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ type }) => {
+  const { projectId } = useParams();
   const { t } = useTranslation();
   const project = useProjectStore(state => state.selectedProject);
+
+  React.useEffect(() => {
+    // Add your project fetching logic here using the projectId
+  }, [projectId]);
 
   // Mock data - replace with real data in production
   const stats = {
