@@ -24,10 +24,10 @@ const AuditTrail: React.FC = () => {
 
   const totalPages = Math.ceil(events.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const sortedEvents = events.sort((a, b) => b.date.getTime() - a.date.getTime());
+  const sortedEvents = [...events].sort((a, b) => b.date.getTime() - a.date.getTime());
   const paginatedEvents = sortedEvents.slice(startIndex, startIndex + itemsPerPage);
 
-  const getEventColor = (kind: string) => {
+  const getEventColor = (kind: 'creation' | 'read' | 'deletion') => {
     switch (kind) {
       case 'creation':
         return 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400';
