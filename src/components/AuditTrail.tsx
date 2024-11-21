@@ -2,10 +2,12 @@ import clsx from 'clsx';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import React, { useState } from 'react';
 
+type AuditEventKind = 'creation' | 'read' | 'deletion';
+
 interface AuditEvent {
   id: string;
   date: Date;
-  kind: 'creation' | 'read' | 'deletion';
+  kind: AuditEventKind;
   documentName: string;
 }
 
